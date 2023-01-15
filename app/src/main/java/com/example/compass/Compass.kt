@@ -8,6 +8,7 @@ import android.hardware.SensorManager
 import android.view.animation.Animation
 import android.view.animation.RotateAnimation
 import android.widget.ImageView
+import android.widget.TextView
 
 class Compass(context:Context) : SensorEventListener {
 
@@ -18,6 +19,11 @@ class Compass(context:Context) : SensorEventListener {
     private val mGeomagnetic=FloatArray(3)
     private var azimuth=0f
     private var correctAzimuth=0f
+
+    /*
+    * An azimuth is an angular measurement in a spherical coordinate system.
+    * More specifically, it is the horizontal angle from a cardinal direction, most commonly north.
+    * */
 
     init {
         sensorManager=context.getSystemService(Context.SENSOR_SERVICE) as SensorManager

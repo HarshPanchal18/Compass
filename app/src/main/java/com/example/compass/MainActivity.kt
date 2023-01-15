@@ -13,7 +13,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         supportActionBar?.hide()
-        val image_hands:ImageView=findViewById(R.id.image_hands)
         val image_dials:ImageView=findViewById(R.id.image_dial)
 
         try{
@@ -22,7 +21,6 @@ class MainActivity : AppCompatActivity() {
             e.printStackTrace()
             Toast.makeText(this, "Either accelerometer or magnetic sensor not found" , Toast.LENGTH_LONG).show()
         }
-        compass?.arrowView=image_hands
         compass?.arrowView=image_dials
     }
 
